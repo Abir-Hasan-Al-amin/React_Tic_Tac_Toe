@@ -47,13 +47,7 @@ function TicTacToe() {
   };
 
   const winner = checkWin(board);
-  const drawCheck=() => {
-    if (count === 9) {
-      return true;
-    }
-    return false;
-  };
-  const draw = drawCheck();
+  const draw = count === 9 ? true : false;
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <div className=" text-4xl text-zinc-700 p-8">Tic Tac Toe</div>
